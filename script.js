@@ -1,0 +1,20 @@
+
+// Change navbar style on scroll
+window.addEventListener('scroll', () => {
+    const navbar = document.querySelector('.navbar');
+    if (window.scrollY > 50) {
+        navbar.classList.remove('transparent');
+        navbar.classList.add('solid');
+    } else {
+        navbar.classList.remove('solid');
+        navbar.classList.add('transparent');
+    }
+});
+
+// Toggle mobile menu
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+});
